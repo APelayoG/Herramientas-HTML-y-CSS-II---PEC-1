@@ -1,0 +1,15 @@
+@use '../variables' as *;
+
+// Reset Global
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-primary;
+  background: linear-gradient(144deg, $color-bg-dark 8%, $color-bg-teal 52%, $color-bg-sage 82%, $color-bg-sand 92%, $color-bg-slate 100%);
+  color: $color-white;
+  min-height: 100vh;
+}

@@ -1,0 +1,136 @@
+@use '../variables' as *;
+
+/** @define movie-card */
+.movie-card__hero {
+  width: 100%;
+  max-width: px-to-rem(985px);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(20px);
+}
+
+/** @define tech-spec */
+.tech-spec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(10px);
+
+  &__header {
+    display: inline-flex;
+    align-items: center;
+    gap: px-to-rem(8px);
+  }
+
+  &__icon {
+    font-size: px-to-rem(16px);
+  }
+
+  &__title {
+    font-size: px-to-rem(16px);
+    font-weight: 400;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: px-to-rem(15px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem(4px);
+    min-width: px-to-rem(90px);
+  }
+
+  &__label {
+    font-size: px-to-rem(12px);
+    font-weight: 100;
+    opacity: 0.8;
+  }
+
+  &__value {
+    font-size: px-to-rem(12px);
+    font-weight: 500;
+  }
+}
+
+/** @define movie-card */
+.movie-card__media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: px-to-rem(20px);
+  width: 100%;
+}
+
+.movie-card__poster {
+  width: px-to-rem(263px);
+  height: px-to-rem(395px);
+  border-radius: px-to-rem(10px);
+  object-fit: cover;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+    max-width: px-to-rem(263px);
+    height: auto;
+  }
+}
+
+/** @define trailer-button */
+.trailer-button {
+  flex: 1 1 px-to-rem(400px);
+  max-width: px-to-rem(702px);
+  height: px-to-rem(395px);
+  padding: px-to-rem(20px);
+  background:
+    linear-gradient(0deg, rgba(93, 110, 119, 0.65) 0%, rgba(93, 110, 119, 0.65) 100%),
+    url('../images/Aftersun_pelicula_donde_ver.jpg') center/cover no-repeat;
+  background-blend-mode: multiply, normal;
+  border-radius: px-to-rem(10px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: px-to-rem(15px);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  &__icon {
+    color: $color-white;
+    font-size: px-to-rem(48px);
+  }
+
+  &__text {
+    color: $color-white;
+    font-size: clamp(px-to-rem(32px), 5vw, px-to-rem(64px));
+    font-weight: 700;
+    text-transform: lowercase;
+  }
+}
+
+/** @define genre-tags */
+.genre-tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: px-to-rem(10px);
+  list-style: none;
+  margin-top: px-to-rem(10px);
+
+  &__item {
+    padding: px-to-rem(4px) px-to-rem(12px);
+    box-shadow: 0 3px 4px rgba(37, 46, 47, 0.8);
+    border-radius: px-to-rem(15px);
+    outline: 1px solid $color-white;
+    outline-offset: -1px;
+    font-size: px-to-rem(12px);
+    font-weight: 400;
+  }
+}

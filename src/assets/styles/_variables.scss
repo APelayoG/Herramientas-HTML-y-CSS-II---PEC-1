@@ -1,12 +1,22 @@
-@use "sass:color";
+// Colores
+$color-bg-dark: #242d2e;
+$color-bg-teal: #699793;
+$color-bg-sage: #b2c9be;
+$color-bg-sand: #e3d2ca;
+$color-bg-slate: #5d6e77;
+$color-text-dark: #0e322d;
+$color-text-muted: #4c6b69;
+$color-white: #fff;
 
-$font-family-sans-serif:
-  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+// Tipografía
+$font-primary: 'Inter', system-ui, -apple-system, sans-serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
-$mqMinWidth: 420px;
+// Función de conversión px a rem
+@function px-to-rem($px) {
+  @return ($px / 16px) * 1rem;
+}

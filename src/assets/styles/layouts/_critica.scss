@@ -1,0 +1,48 @@
+@use '../variables' as *;
+
+/** @define reviews-grid */
+.reviews-grid {
+  width: 100%;
+  max-width: px-to-rem(800px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: px-to-rem(10px);
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/** @define review-card */
+.review-card {
+  padding: px-to-rem(15px);
+  background: rgba(178, 201, 190, 0.8);
+  border-radius: px-to-rem(10px);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(10px);
+
+  &__rating {
+    display: flex;
+    gap: px-to-rem(4px);
+  }
+
+  &__star {
+    color: $color-text-muted;
+    font-size: px-to-rem(16px);
+  }
+
+  &__quote {
+    color: $color-text-dark;
+    font-size: px-to-rem(12px);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__author {
+    color: $color-text-dark;
+    font-size: px-to-rem(10px);
+    font-weight: 400;
+    font-style: normal;
+  }
+}

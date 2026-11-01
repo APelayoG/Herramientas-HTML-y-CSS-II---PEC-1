@@ -1,0 +1,32 @@
+@use '../variables' as *;
+
+/** @define scene-gallery */
+.scene-gallery {
+  width: 100%;
+  max-width: px-to-rem(800px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: px-to-rem(10px);
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    height: px-to-rem(146px);
+    overflow: hidden;
+    background-color: $color-bg-sage;
+    border-radius: px-to-rem(10px);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

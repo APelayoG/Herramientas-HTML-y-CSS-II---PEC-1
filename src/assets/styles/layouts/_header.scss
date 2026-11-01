@@ -1,0 +1,35 @@
+@use '../variables' as *;
+
+/** @define movie-card */
+.movie-card__header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: px-to-rem(20px);
+}
+
+.movie-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: px-to-rem(10px);
+  margin-bottom: px-to-rem(10px);
+
+  &-icon {
+    font-size: px-to-rem(14px);
+  }
+
+  &-text {
+    font-size: px-to-rem(14px);
+    font-weight: 400;
+  }
+}
+
+.movie-card__title {
+  font-size: clamp(px-to-rem(56px), 8vw, px-to-rem(128px));
+  font-weight: 700;
+  text-transform: lowercase;
+  line-height: 0.95;
+  text-align: left;
+}

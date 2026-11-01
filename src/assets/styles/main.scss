@@ -6,14 +6,25 @@
 /**
  * Import dependencies
  */
-@use "dependencies";
+@use 'dependencies';
+
+/**
+ * Import base styles
+ */
+@use 'base/reset';
 
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
-@use "layouts/home";
+@use 'layouts/main';
+@use 'layouts/header';
+@use 'layouts/ficha-tecnica';
+@use 'layouts/section-block';
+@use 'layouts/escenas';
+@use 'layouts/critica';
+@use 'layouts/footer';
 
 /**
  * Do NOT include anything else in this file!
